@@ -1,0 +1,45 @@
+.card{
+    border: 1px solid $light;
+    padding: .5rem;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s;
+    padding-bottom: 1rem;
+    background-color:  rgba($color: #000000, $alpha: .37);
+
+    .card-icon{
+        position: relative;
+        text-align: center;
+        display: inline-flex;
+        font-size: 3rem;
+        padding: .5rem;
+        z-index: 2;
+        color: $light;
+    }
+    .card-title{
+        color: $white;
+        text-align: center;
+        padding: 1rem 0 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .card-body{
+        text-align: center;
+        padding: 1rem;
+        color: $light;
+        letter-spacing: 1px;
+        line-height: 1.45;
+    }
+    &:hover{
+        background-color: $primary;
+        color: $light;
+        .card-title, .card-icon{
+            color: $dark ;
+        }
+        .btn{
+            background-color: $dark !important;
+        }
+    }
+}
