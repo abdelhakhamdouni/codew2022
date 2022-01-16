@@ -672,7 +672,7 @@ strong {
 }
 
 .bg_dark {
-  background-color: #2e294eff !important;
+  background-color: #343050 !important;
 }
 
 .bg_light {
@@ -704,7 +704,7 @@ strong {
 }
 
 .dark {
-  color: #2e294eff !important;
+  color: #343050 !important;
 }
 
 .light {
@@ -736,7 +736,7 @@ strong {
 }
 
 .btn_dark {
-  color: #2e294eff !important;
+  color: #343050 !important;
 }
 
 .btn_light {
@@ -768,7 +768,7 @@ strong {
 }
 
 .border_dark {
-  border: 1px solid #2e294eff !important;
+  border: 1px solid #343050 !important;
 }
 
 .border_light {
@@ -994,7 +994,7 @@ h2 {
     color: white !important;
   }
   .navbar .menu li a.active {
-    color: #2e294eff !important;
+    color: #343050 !important;
   }
 }
 .hero {
@@ -1100,10 +1100,10 @@ h2 {
   color: #eadedaff;
 }
 .card:hover .card-title, .card:hover .card-icon {
-  color: #2e294eff;
+  color: #343050;
 }
 .card:hover .btn {
-  background-color: #2e294eff !important;
+  background-color: #343050 !important;
 }
 
 .about .col5 {
@@ -1115,7 +1115,7 @@ h2 {
   font-weight: 700;
 }
 .about p {
-  color: #2e294eff;
+  color: #343050;
 }
 .about .col img {
   height: 450px;
