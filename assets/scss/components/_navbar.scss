@@ -1,6 +1,5 @@
 .navbar{
     width: 100%;
-    overflow-x: hidden;
     padding: 1rem 0;
     position: sticky;
     z-index: 8;
@@ -22,7 +21,7 @@
     span[class*="icon-"]{
         position: relative;
         z-index: 10;
-        
+        font-size: 1.5rem;
     }
     .icon-indent-increase{
         color: white;
@@ -59,15 +58,15 @@
 @media (max-width: 990px){
     .navbar .menu{
         position: absolute;
-        right: -100%;
+        right: -110%;
         top: 0;
-        min-height: 100%;
+        width: 100%;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 8rem;
-        background-color: $secondary;
+        background-color: $primary;
         z-index: 9;
         transition: .5s;
         &.show{
@@ -75,13 +74,15 @@
         }
         ul{
             flex-direction: column;
-        }
-        li{
-            a{
-                font-size: 1.3rem;
-                color: white !important;
-                &.active{
-                    color: $dark !important;
+            li{
+                margin-top: 1rem;
+                a{
+                    font-size: 1.5rem;
+                    color: white !important;
+                    filter: brightness(100%);
+                    &.active{
+                        color: $dark !important;
+                    }
                 }
             }
         }

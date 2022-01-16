@@ -12,6 +12,7 @@
 /* SCSS Gradient */
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -50,8 +51,8 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: 100vw;
+  overflow-x: hidden !important;
   line-height: 1.1;
   font-family: Roboto, sans-serif;
   transition: 0.3s;
@@ -139,7 +140,7 @@ a, a:active, a:visited {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 800;
   color: #c94100;
 }
 
@@ -918,7 +919,6 @@ h2 {
 
 .navbar {
   width: 100%;
-  overflow-x: hidden;
   padding: 1rem 0;
   position: sticky;
   z-index: 8;
@@ -941,6 +941,7 @@ h2 {
 .navbar span[class*=icon-] {
   position: relative;
   z-index: 10;
+  font-size: 1.5rem;
 }
 .navbar .icon-indent-increase {
   color: white;
@@ -975,15 +976,15 @@ h2 {
 @media (max-width: 990px) {
   .navbar .menu {
     position: absolute;
-    right: -100%;
+    right: -110%;
     top: 0;
-    min-height: 100%;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 8rem;
-    background-color: #45d0e9;
+    background-color: #c94100;
     z-index: 9;
     transition: 0.5s;
   }
@@ -993,11 +994,15 @@ h2 {
   .navbar .menu ul {
     flex-direction: column;
   }
-  .navbar .menu li a {
-    font-size: 1.3rem;
-    color: white !important;
+  .navbar .menu ul li {
+    margin-top: 1rem;
   }
-  .navbar .menu li a.active {
+  .navbar .menu ul li a {
+    font-size: 1.5rem;
+    color: white !important;
+    filter: brightness(100%);
+  }
+  .navbar .menu ul li a.active {
     color: #343050 !important;
   }
 }
@@ -1005,7 +1010,7 @@ h2 {
   position: relative;
   height: 100vh;
   width: 100%;
-  margin-top: -64px;
+  margin-top: -73px;
   background-image: url("../images/hero5.jpg");
   background-size: 100%;
   background-position-y: bottom;
@@ -1043,26 +1048,31 @@ h2 {
   color: #a1a1a1;
   line-height: 1.8;
 }
-.hero .socials ul li span {
+
+.socials ul {
+  flex-direction: row !important;
+}
+.socials ul li span {
   border: 1px solid gray;
   display: inline-flex;
-  padding: 0.3rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
 }
-.hero .socials ul li span:hover {
+.socials ul li span:hover {
   background-color: #eadedaff;
   cursor: pointer;
 }
-.hero .socials ul li span.icon-facebook:hover {
-  color: blue;
+.socials ul li span.icon-facebook:hover {
+  color: blue !important;
 }
-.hero .socials ul li span.icon-twitter:hover {
-  color: #1365fc;
+.socials ul li span.icon-twitter:hover {
+  color: #1365fc !important;
 }
-.hero .socials ul li span.icon-github:hover {
-  color: black;
+.socials ul li span.icon-github:hover {
+  color: black !important;
 }
-.hero .socials ul li span.icon-envelop:hover {
-  color: #45d0e9;
+.socials ul li span.icon-envelop:hover {
+  color: #c94100 !important;
 }
 
 .card {
@@ -1109,6 +1119,9 @@ h2 {
 .card:hover .btn {
   background-color: #343050 !important;
 }
+.card:hover strong {
+  color: #343050 !important;
+}
 
 .about .col5 {
   border-left: 5px solid #c94100;
@@ -1128,9 +1141,9 @@ h2 {
 }
 
 @media (max-width: 766px) {
-  .col {
-    flex-basis: 100%;
-    height: 100%;
+  .col, [class*=col] {
+    flex-basis: 100% !important;
+    width: 100% !important;
   }
 
   .wrapper {
@@ -1145,6 +1158,28 @@ h2 {
     line-height: 26px;
     font-size: 1rem;
   }
+
+  .hero {
+    padding: 8rem 0;
+    text-align: center;
+    background-image: none;
+    background-color: #343050;
+  }
+  .hero .col {
+    padding: 1rem;
+    align-items: center;
+  }
+  .hero h1 {
+    padding: 3rem 1rem;
+  }
+  .hero .range {
+    align-self: flex-start;
+  }
+
+  button:hover [class*=icon-], .btn:hover [class*=icon-] {
+    width: 0;
+    opacity: 0;
+  }
 }
 @media (min-width: 991px) {
   .wrapper {
@@ -1157,6 +1192,10 @@ h2 {
 
   .d-mobile-none {
     display: flex;
+  }
+
+  .hide_on_pc {
+    display: none;
   }
 }
 @media (min-width: 1200px) {

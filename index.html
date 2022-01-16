@@ -15,6 +15,11 @@
         <div class="wrapper px1 flex center between">
             <div class="logo">LOGO</div>
             <div class="menu">
+                <div class="hide_on_pc">
+                    <div class="logo flex center p2">
+                        <a href="/">LOGO</a>
+                    </div>
+                </div>
                 <ul class="flex">
                     <li class="mx1"><a class="link active" href="#">Accueil</a></li>
                     <li class="mx1"><a class="link " href="/#services">Mes services</a></li>
@@ -22,9 +27,17 @@
                     <li class="mx1"><a class="link " href="/#apropos">A propos</a></li>
                     <li class="mx1"><a class="link " href="#">Me contacter</a></li>
                 </ul>
+                <div class="hide_on_pc socials mt2">
+                    <ul class="flex center">
+                        <li class="mr1"><span class="icon-facebook white"></span></li>
+                        <li class="mr1"><span class="icon-twitter white"></span></li>
+                        <li class="mr1"><span class="icon-github white"></span></li>
+                        <li class=""><span class="icon-envelop white"></span></li>
+                    </ul>
+                </div>
             </div>
             <button class="btn bg_primary white py1 px2 action"><span class="icon-user"></span> Login</button>
-            <span id="menu_icon" class="icon-indent-decrease d-none dark"></span>
+            <span id="menu_icon" class="icon-indent-decrease d-none light"></span>
         </div>
     </nav>
     <header class="hero flex">
@@ -165,7 +178,7 @@
                     attaques de pirates du WEb.
                 </p>
             </div>
-            <div class="col col6 flex center mt3">
+            <div class="col col6 flex center mt3 d-mobile-none">
                 <img src="./assets/images/me2.png" alt="">
             </div>
         </div>

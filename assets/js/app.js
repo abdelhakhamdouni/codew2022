@@ -4,6 +4,7 @@ if(document.querySelector('#menu_icon')){
         e.target.classList.toggle('icon-indent-increase')
         if( document.querySelector('.menu') ){
             document.querySelector('.menu').classList.toggle('show')
+            document.querySelector('.navbar').classList.toggle('show_menu')
         }
     })
 }
@@ -13,7 +14,7 @@ if(document.querySelector('#menu_icon')){
 let textes = [
     "CRÉATEUR, concépteur DE SITE WEB",
     "CRÉATEUR d'application mobile",
-    "maintenace et mise à jour WEB",
+    "maintenace et mise à jour de site WEB",
     "Audit SEO et référencement naturel",
 ]
 

@@ -4,7 +4,7 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    margin-top: -64px;
+    margin-top: -73px;
     background-image: url('../images/hero5.jpg');
     background-size: 100%;
     background-position-y: bottom;
@@ -42,20 +42,25 @@
         color: #a1a1a1;
         line-height: 1.8;
     }
-    .socials{
-        ul li span{
+    
+}
+
+.socials{
+    ul {
+        flex-direction: row !important;
+        li span{
             border: 1px solid gray;
             display: inline-flex;
-            padding: .3rem;
+            padding: .5rem;
+            font-size: 1.5rem;
             &:hover{
                 background-color: $light;
                 cursor: pointer;
             }
-            &.icon-facebook:hover{ color: blue; }
-            &.icon-twitter:hover{ color: rgb(19, 101, 252); }
-            &.icon-github:hover{ color: rgb(0, 0, 0); }
-            &.icon-envelop:hover{ color: $secondary; }
+            &.icon-facebook:hover{ color: blue !important; }
+            &.icon-twitter:hover{ color: rgb(19, 101, 252) !important; }
+            &.icon-github:hover{ color: rgb(0, 0, 0) !important; }
+            &.icon-envelop:hover{ color: $primary !important; }
         }
     }
 }
-
