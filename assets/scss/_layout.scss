@@ -25,8 +25,8 @@ body{
 .text-center{text-align: center;}
 .start{align-items: flex-start;}
 .end{align-items: flex-end;}
-.column{flex-direction: column;}
-
+.column{flex-direction: column !important;}
+.row{flex-direction: row !important;}
 .w-100{width: 100%;}
 .w-75{width: 75%;}
 .w-50{width: 50%;}

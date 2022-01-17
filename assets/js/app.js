@@ -1,7 +1,7 @@
 let textes = [
     "CRÉATEUR & concépteur DE SITE WEB",
     "CRÉATEUR d'application mobile",
-    "maintenace & mise à jour de site WEB",
+    "maintenace & refonte de site WEB",
     "Audit SEO & référencement naturel",
 ]
 

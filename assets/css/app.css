@@ -148,6 +148,10 @@ strong {
   font-size: 150%;
 }
 
+.copy {
+  filter: brightness(90%);
+}
+
 @keyframes zoomin {
   from {
     background-position: top right;
@@ -850,7 +854,11 @@ body {
 }
 
 .column {
-  flex-direction: column;
+  flex-direction: column !important;
+}
+
+.row {
+  flex-direction: row !important;
 }
 
 .w-100 {
@@ -1000,18 +1008,18 @@ h2 {
   .navbar .menu.show {
     right: 0;
   }
-  .navbar .menu ul {
+  .navbar .menu ul:not(.socials) {
     flex-direction: column;
   }
-  .navbar .menu ul li {
+  .navbar .menu ul:not(.socials) li {
     margin-top: 1rem;
   }
-  .navbar .menu ul li a {
+  .navbar .menu ul:not(.socials) li a {
     font-size: 1.5rem;
     color: white !important;
     filter: brightness(100%);
   }
-  .navbar .menu ul li a.active {
+  .navbar .menu ul:not(.socials) li a.active {
     color: #343050 !important;
   }
 }
@@ -1059,7 +1067,7 @@ h2 {
 }
 
 .socials ul {
-  flex-direction: row !important;
+  flex-direction: row;
 }
 .socials ul li span {
   border: 1px solid gray;
@@ -1253,6 +1261,10 @@ form button:disabled {
   cursor: not-allowed;
 }
 
+.testimonial {
+  overflow-x: hidden;
+}
+
 .testimonials_list {
   width: 500%;
   display: flex;
@@ -1276,6 +1288,14 @@ form button:disabled {
   background-color: #6d6d6d;
 }
 
+@media (max-width: 990px) {
+  .testimonials_list {
+    overflow-x: hidden;
+  }
+  .testimonials_list .card {
+    width: 90%;
+  }
+}
 @media (max-width: 766px) {
   .col, [class*=col] {
     flex-basis: 100% !important;
