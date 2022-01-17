@@ -47,3 +47,32 @@
         }
     }
 }
+
+.portfolio_card{
+    position: relative;
+    height: 15rem;
+    overflow: hidden;
+    .image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        img{
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    .portfolio_body{
+        position: relative;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.747);
+        height: 100%;
+        top: -100%;
+        transition: .3s ease;
+    }
+    &:hover{
+        .portfolio_body{
+            top: 0;
+        }
+    }
+}
