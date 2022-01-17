@@ -12,10 +12,10 @@ if(document.querySelector('#menu_icon')){
 
 
 let textes = [
-    "CRÉATEUR, concépteur DE SITE WEB",
+    "CRÉATEUR & concépteur DE SITE WEB",
     "CRÉATEUR d'application mobile",
-    "maintenace et mise à jour de site WEB",
-    "Audit SEO et référencement naturel",
+    "maintenace & mise à jour de site WEB",
+    "Audit SEO & référencement naturel",
 ]
 
 
