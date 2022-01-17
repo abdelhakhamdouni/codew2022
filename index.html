@@ -355,6 +355,68 @@
         <div class="wrapper flex center mb5">
             <h2 class="section_title text-center upper white">Les clients témoignent</h2>
         </div>
+        <div class="testimonials py5">
+            <div class="testimonials_list">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <h2 class="card-title"> Jean DAO </h2>
+                        <div class="card-body ">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis praesentium quam ducimus officia quibusdam adipisci nulla esse voluptates rerum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <h2 class="card-title"> Jean DAO 2 </h2>
+                        <div class="card-body ">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis praesentium quam ducimus officia quibusdam adipisci nulla esse voluptates rerum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <h2 class="card-title"> Jean DAO </h2>
+                        <div class="card-body ">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis praesentium quam ducimus officia quibusdam adipisci nulla esse voluptates rerum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <h2 class="card-title"> Jean DAO </h2>
+                        <div class="card-body ">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis praesentium quam ducimus officia quibusdam adipisci nulla esse voluptates rerum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <h2 class="card-title"> Jean DAO </h2>
+                        <div class="card-body ">
+                            <p class="">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis praesentium quam ducimus officia quibusdam adipisci nulla esse voluptates rerum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="wrapper testimonials_index flex center">
+            <span class="bg_primary m1" id="index_0"></span>
+            <span class="m1" id="index_1"></span>
+            <span class="m1" id="index_2"></span>
+            <span class="m1" id="index_3"></span>
+            <span class="m1" id="index_4"></span>
+        </div>
     </section>
     <section class="section contact bg_white">
         <div class="wrapper flex center mb5">
@@ -389,9 +451,32 @@
                     <h2 class="primary mb2">Formulaire de contact</h2>
                     <form>
                         <div class="row">
-                            <input class="border p1 px2" type="text" name="name" id="name">
-                            <label for="name">Nom et prénom</label>
+                            <label for="name">Nom et prénom *</label>
+                            <input class="border p1 px2" type="text" name="name" id="name" required>
                             <p class="help primary">Le nom et prénom ne sont pas valides</p>
+                        </div>
+                        <div class="row">
+                            <label for="email">Adresse email *</label>
+                            <input class="border p1 px2" type="email" name="email" id="email" required>
+                            <p class="help primary">L'adresse email est invalide</p>
+                        </div>
+                        <div class="row">
+                            <label for="mobile">Téléphone</label>
+                            <input class="border p1 px2" type="tel" name="mobile" id="mobile">
+                            <p class="help primary">Le numéro de téléphone est invalide</p>
+                        </div>
+                        <div class="row">
+                            <label for="message">Message</label>
+                            <textarea class="border p1 px2" type="text" name="message" id="message" rows="7" required></textarea>
+                            <p class="help primary">Le nom et prénom ne sont pas valides</p>
+                        </div>
+                        <div class="row checkbox py2">
+                            <input class="border p1 px2" type="checkbox" name="accepte" id="accepte" rows="7" required>
+                            <span for="message">J'accepte que mon nom, prénom, email et ( téléphone ) soient enregistré pour me contacter et repondre à ma demande.</span>
+                            <p class="help primary">Le texte est trop court.</p>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="white upper py1 bg_primary" disabled>Valider</button>
                         </div>
                     </form>
                 </div>

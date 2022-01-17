@@ -27,3 +27,9 @@
         width: 100%;
     }
 }
+
+@keyframes slide {
+    to{
+        transform: translateX(-100%);
+    }
+}
