@@ -1204,6 +1204,41 @@ h2 {
   width: 75%;
 }
 
+form .row {
+  position: relative;
+}
+form label {
+  display: inline-block;
+  position: relative;
+  transform: translate(10px, -34px);
+  background-color: #fff;
+  padding: 0.2rem;
+}
+form input {
+  border: 1px solid #6d6d6d;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+form input:focus, form input.valid, form input.fail {
+  outline: none;
+  border-color: #00da00;
+}
+form input:focus + label, form input.valid + label, form input.fail + label {
+  transform: translate(10px, -57px);
+  color: #00da00;
+}
+form input.fail {
+  border-color: red;
+}
+form input.fail ~ .help {
+  display: block;
+}
+form .help {
+  display: none;
+  transform: translate(5px, -25px);
+}
+
 @media (max-width: 766px) {
   .col, [class*=col] {
     flex-basis: 100% !important;

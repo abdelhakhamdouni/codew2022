@@ -39,3 +39,19 @@ window.addEventListener('scroll', ()=>{
         document.querySelector('.navbar').classList.remove('bg_dark')
     }
 })
+
+let nameInput = document.querySelector('input[name="name"')
+
+nameInput.addEventListener('blur', function(e){
+    if( this.value.length == 0){
+        this.classList.remove('valid')
+        this.classList.remove('fail')
+    }
+    else if(this.value.length > 5){
+        this.classList.add('valid')
+        this.classList.remove('fail')
+    }else{
+        this.classList.remove('valid')
+        this.classList.add('fail')
+    }
+})
