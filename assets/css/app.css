@@ -144,6 +144,10 @@ strong {
   color: #c94100;
 }
 
+.icon-2x {
+  font-size: 150%;
+}
+
 @keyframes zoomin {
   from {
     background-position: top right;
