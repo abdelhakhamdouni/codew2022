@@ -7,7 +7,6 @@ let textes = [
 
 let i = 0
 let title = document.querySelector('.site-title')
-
 let form = document.querySelector('form')
 let formElements = []
 
@@ -55,10 +54,10 @@ if(document.querySelector('.range')){document.querySelector('.range').classList.
  * Form Validate
  */
 form.querySelectorAll('input').forEach( e => formElements.push(e) )
+formElements.push(form.querySelector('textarea'))
 form.querySelector('input[type="checkbox"').addEventListener('input', function(){
     this.checked ? this.classList.add('valid') : this.classList.remove('valid')
-    check_form() ? form.querySelector('button').removeAttribute('disabled') : null
-
+    check_form()
 })
 form.querySelectorAll('input:not([type="checkbox"])').forEach( i => {
     i.addEventListener('focus', e => {
@@ -68,6 +67,15 @@ form.querySelectorAll('input:not([type="checkbox"])').forEach( i => {
     })
     i.addEventListener('input', function(e){
         handler(e, 5)
+            check_form()
+    })
+    i.addEventListener('blur', function(e){
+        handler(e, 5)
+            check_form()
+    })
+    i.addEventListener('change', function(e){
+        handler(e, 5)
+            check_form()
     })
 })
 form.querySelector('textarea').addEventListener('focus', e => {
@@ -77,9 +85,16 @@ form.querySelector('textarea').addEventListener('focus', e => {
     })
 form.querySelector('textarea').addEventListener('input', function(e){
     handler(e, 50)
+    check_form()
 })
-
-
+form.querySelector('textarea').addEventListener('blur', function(e){
+    handler(e, 50)
+    check_form()
+})
+form.querySelector('textarea').addEventListener('change', function(e){
+    handler(e, 50)
+    check_form()
+})
 function handler(event, number) {
     let labelFor = event.target.getAttribute('name')
     let label = document.querySelector(`label[for=${labelFor}]`)
@@ -100,19 +115,19 @@ function handler(event, number) {
         event.target.classList.remove('valid')
         event.target.classList.add('fail')
     }
-    
-    check_form() ? form.querySelector('button').removeAttribute('disabled') : null
+
 }
 
 
 function check_form(){
     let valide = true
     formElements.forEach(e => {
+        console.log(e)
         if( ! e.classList.contains("valid")){
             valide = false
         }
     })
-    return valide
+    valide ? form.querySelector('button').removeAttribute('disabled') : form.querySelector('button').setAttribute('disabled', 'disabled')
 }
 
 /**

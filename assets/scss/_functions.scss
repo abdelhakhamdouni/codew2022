@@ -64,3 +64,9 @@
         border: 1px solid $color !important;
     }
 }
+
+@each $color_name, $color in $colors {
+    .hover_#{$color_name}:hover{
+        color: $color !important;
+    }
+}

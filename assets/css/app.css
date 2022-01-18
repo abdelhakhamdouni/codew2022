@@ -82,7 +82,8 @@ button, .btn {
   background-color: transparent;
   padding: 0;
   margin: 0;
-  width: 150px;
+  min-width: 150px;
+  padding: 0.5rem 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -825,6 +826,42 @@ strong {
   border: 1px solid #b1b1b1 !important;
 }
 
+.hover_primary:hover {
+  color: #c94100 !important;
+}
+
+.hover_secondary:hover {
+  color: #45d0e9 !important;
+}
+
+.hover_dark:hover {
+  color: #343050 !important;
+}
+
+.hover_light:hover {
+  color: #eadedaff !important;
+}
+
+.hover_yellow:hover {
+  color: #ffd400ff !important;
+}
+
+.hover_white:hover {
+  color: #fff !important;
+}
+
+.hover_gray:hover {
+  color: #6d6d6d !important;
+}
+
+.hover_light-gray:hover {
+  color: #eeeeee !important;
+}
+
+.hover_text-light:hover {
+  color: #b1b1b1 !important;
+}
+
 body {
   max-width: unset;
 }
@@ -1243,7 +1280,7 @@ form label {
   display: inline-block;
   position: relative;
   transform: translate(10px, 33px);
-  background-color: #fff;
+  background: linear-gradient(to bottom, #fff 60%, #ffffff00);
   padding: 0.2rem;
 }
 form label.focusable {
@@ -1271,10 +1308,20 @@ form input:not([type=checkbox]).fail ~ .help, form textarea.fail ~ .help {
 form .help {
   display: none;
 }
+form button {
+  cursor: pointer;
+}
+form button:not(:disabled):hover {
+  filter: brightness(90%);
+}
 form button:disabled {
   filter: grayscale(1);
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+input:-internal-autofill-selected {
+  background-color: #fff !important;
 }
 
 .testimonial {
