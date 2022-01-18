@@ -18,6 +18,7 @@ $yellow: #ffd400ff;
 $white: #fff;
 $gray: #6d6d6d;
 $light-gray: #eeeeee;
+$text-light: #b1b1b1;
 $success: rgb(0, 218, 0);
 
 
@@ -34,6 +35,6 @@ $gradient-radial: radial-gradient(#820263ff, #d90368ff, #eadedaff, #2e294eff, #f
 
 
 
-$colors:("primary":$primary, "secondary":$secondary, "dark": $dark, "light": $light, "yellow": $yellow, "white": $white, "gray": $gray, "light-gray": $light-gray);
+$colors:("primary":$primary, "secondary":$secondary, "dark": $dark, "light": $light, "yellow": $yellow, "white": $white, "gray": $gray, "light-gray": $light-gray, "text-light": $text-light);
 
 $cols: 12;

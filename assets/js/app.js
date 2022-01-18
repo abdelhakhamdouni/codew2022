@@ -57,6 +57,8 @@ if(document.querySelector('.range')){document.querySelector('.range').classList.
 form.querySelectorAll('input').forEach( e => formElements.push(e) )
 form.querySelector('input[type="checkbox"').addEventListener('input', function(){
     this.checked ? this.classList.add('valid') : this.classList.remove('valid')
+    check_form() ? form.querySelector('button').removeAttribute('disabled') : null
+
 })
 form.querySelectorAll('input:not([type="checkbox"])').forEach( i => {
     i.addEventListener('focus', e => {
@@ -67,24 +69,17 @@ form.querySelectorAll('input:not([type="checkbox"])').forEach( i => {
     i.addEventListener('input', function(e){
         handler(e, 5)
     })
-    i.addEventListener('blur', function(e){
-        handler(e, 5)
-    })
 })
-form.querySelectorAll('textarea').forEach( i => {
-    formElements.push(i)
-    i.addEventListener('focus', e => {
+form.querySelector('textarea').addEventListener('focus', e => {
         let labelFor = e.target.getAttribute('name')
         let label = document.querySelector(`label[for=${labelFor}]`)
         label.classList.add('focusable')
     })
-    i.addEventListener('input', function(e){
-        handler(e, 50)
-    })
-    i.addEventListener('blur', function(e){
-        handler(e, 50)
-    })
+form.querySelector('textarea').addEventListener('input', function(e){
+    handler(e, 50)
 })
+
+
 function handler(event, number) {
     let labelFor = event.target.getAttribute('name')
     let label = document.querySelector(`label[for=${labelFor}]`)
@@ -105,10 +100,11 @@ function handler(event, number) {
         event.target.classList.remove('valid')
         event.target.classList.add('fail')
     }
-    let valide = check_form()
-    console.log(valide)
-    valide ? form.querySelector('button').removeAttribute('disabled') : null
+    
+    check_form() ? form.querySelector('button').removeAttribute('disabled') : null
 }
+
+
 function check_form(){
     let valide = true
     formElements.forEach(e => {
@@ -126,23 +122,33 @@ function check_form(){
 let testi_list = document.querySelector('.testimonials_list')
 let steps = 0
 let direction = true;
-let testi_interval = setInterval(()=>{
-    steps++
-    if(steps == 5) steps = 0
-    testi_list.style.transform = `translateX(-${steps * 20}%)`
-    document.querySelectorAll('[id*="index_"').forEach(ele => ele.classList.remove('bg_primary'))
-    document.querySelector(`#index_${steps}`).classList.add('bg_primary')
-}, 5000)
+let testi_interval = sliding()
 
 testi_list.addEventListener('mouseenter', e => {
     clearInterval(testi_interval)
 })
 testi_list.addEventListener('mouseleave', e => {
-    testi_interval = setInterval(()=>{
+    testi_interval = sliding()
+})
+
+document.querySelectorAll(`.index`).forEach(ele => {
+    ele.addEventListener('click', function(){
+        let index = this.dataset.index
+        clearInterval(testi_interval)
+        testi_list.style.transform = `translateX(-${index * 20}%)`
+        document.querySelectorAll('[id*="index_"').forEach(ele => ele.classList.remove('bg_primary'))
+        document.querySelector(`#index_${index}`).classList.add('bg_primary')
+        steps = index
+        testi_interval = sliding()
+    })
+})
+
+function sliding() {
+    return setInterval(()=>{
         steps++ 
         if(steps == 5) steps = 0
         testi_list.style.transform = `translateX(-${steps * 20}%)`
         document.querySelectorAll('[id*="index_"').forEach(ele => ele.classList.remove('bg_primary'))
         document.querySelector(`#index_${steps}`).classList.add('bg_primary')
-    }, 5000)
-})
+    }, 10000)
+}

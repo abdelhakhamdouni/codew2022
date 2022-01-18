@@ -713,6 +713,10 @@ strong {
   background-color: #eeeeee !important;
 }
 
+.bg_text-light {
+  background-color: #b1b1b1 !important;
+}
+
 .primary {
   color: #c94100 !important;
 }
@@ -743,6 +747,10 @@ strong {
 
 .light-gray {
   color: #eeeeee !important;
+}
+
+.text-light {
+  color: #b1b1b1 !important;
 }
 
 .btn_primary {
@@ -777,6 +785,10 @@ strong {
   color: #eeeeee !important;
 }
 
+.btn_text-light {
+  color: #b1b1b1 !important;
+}
+
 .border_primary {
   border: 1px solid #c94100 !important;
 }
@@ -807,6 +819,10 @@ strong {
 
 .border_light-gray {
   border: 1px solid #eeeeee !important;
+}
+
+.border_text-light {
+  border: 1px solid #b1b1b1 !important;
 }
 
 body {
@@ -1286,6 +1302,10 @@ form button:disabled {
   width: 25px;
   height: 3px;
   background-color: #6d6d6d;
+  cursor: pointer;
+}
+.testimonials_index span:hover {
+  color: #c94100 !important;
 }
 
 @media (max-width: 990px) {
